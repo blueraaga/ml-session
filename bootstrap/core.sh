@@ -31,6 +31,9 @@ sudo apt -y upgrade
 
 # Install pip, upgrade it (leading to 2 pips - system and python) and
 # then remove system pip. Final version is pip 10.
+
+sudo apt install -y virtualbox-guest-dkms
+
 echo -e "${YELLOW}------ Install Python pip ------${NC}"
 sudo apt install -y python3-pip
 
