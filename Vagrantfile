@@ -42,12 +42,8 @@ end
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine.
-  # To be checked
+  # Zeppelin Notebooks
   config.vm.network "forwarded_port", guest: 8080, host: 8181
-  # # Spark related
-  # config.vm.network "forwarded_port", guest: 4040, host: 4141
-  # # Apache web server
-  # config.vm.network "forwarded_port", guest: 80, host: 81
   #  Jupyter Notebook
   config.vm.network "forwarded_port", guest: 8888, host: 8787
 
@@ -89,6 +85,4 @@ end
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "bootstrap/core.sh"
   config.vm.provision "shell", path: "bootstrap/booster.sh"
-  config.vm.provision "shell", path: "bootstrap/acessories.sh"
-  config.vm.provision "shell", path: "bootstrap/custom.sh"
 end
