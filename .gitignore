@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# my additions
+.vagrant
+shunt
+.DS_Store
+resources/apps/
+resources/data/
+resources/utils/

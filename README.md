@@ -1,2 +1,2 @@
-# pytorch_session
-PyTorch learning sessions
+# ML Session
+ML learning sessions
