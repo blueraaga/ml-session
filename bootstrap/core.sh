@@ -29,9 +29,7 @@ echo -e "${YELLOW}------ Update and upgrade package list ------${NC}"
 sudo apt update
 sudo apt -y upgrade
 
-# Install pip, upgrade it (leading to 2 pips - system and python) and
-# then remove system pip. Final version is pip 10.
-
+# Install VirtualBox Guestadditions for folder mounting
 sudo apt install -y virtualbox-guest-dkms
 
 echo -e "${YELLOW}------ Install Python pip ------${NC}"
@@ -40,12 +38,8 @@ sudo apt install -y python3-pip
 echo -e "${YELLOW}------ Upgrade Python pip ------${NC}"
 pip3 install --upgrade pip
 
-# echo -e "${RED}------ Remove pip system package ------${NC}"
-# sudo apt-get -y remove python3-pip
-
 # Install Python packages
 echo -e "${YELLOW}------ Install Python packages ------${NC}"
-# - Explore possibility for requirements.txt
 # Install math processing stuffs
 pip3 install numpy scipy pandas
 # Install charting libraries
@@ -60,7 +54,6 @@ pip3 install virtualenv
 
 # Start Jupyter notebook
 echo -e "${YELLOW}------ Start Jupyter notebook ------${NC}"
-# - Explore running Jupyter as a service
 echo y | jupyter notebook --generate-config
 echo -e 'mlwb\nmlwb' | jupyter notebook password
 sudo jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --notebook-dir='/vagrant/jnotes' &

@@ -7,9 +7,8 @@ echo -e "${YELLOW}------ Initiating Booster Script ------${NC}"
 # Install charting libraries
 pip3 install seaborn altair
 # Install Flask: Barebones for serving model
-# - Example code to be done
 pip3 install Flask
-# Install Spark support with Apache Beam
+# Install PySpark
 pip3 install pyspark
 # Install OpenCV for image processing (preceeded by dependencies)
 # https://stackoverflow.com/questions/47113029/importerror-libsm-so-6-cannot-open-shared-object-file-no-such-file-or-directo
@@ -122,11 +121,5 @@ sed -e "${val_lnum}s|true|false|" -i /home/ubuntu/zeppelin/conf/zeppelin-site.xm
 
 # Spark-YARN: https://www.linode.com/docs/databases/hadoop/install-configure-run-spark-on-top-of-hadoop-yarn-cluster/
 # Setup hadoop: https://www.linode.com/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/
-
-echo -e "${YELLOW}------ Install Hadoop ------${NC}"
-echo "Nothing done currently"
-# Download hadoop from http://www-eu.apache.org/dist/hadoop/common/
-# sed -e 's|HADOOP_HOME=~/hadoop-2.8.0||g' -i /etc/environment
-# sudo echo HADOOP_HOME=~/hadoop-2.8.0 >> /etc/environment
 
 echo -e "${YELLOW}------ Completed Booster Script ------${NC}"
